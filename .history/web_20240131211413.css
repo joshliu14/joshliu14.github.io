@@ -1,0 +1,164 @@
+/* Reset some default styles for consistency across browsers */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #444;
+  padding: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile section */
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+}
+
+.profile h2 {
+  margin-top: 10px;
+}
+
+/* About Me section */
+.about-me {
+  margin-top: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* ... Previous CSS ... */
+
+/* Header styles with animation */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out;
+}
+
+header:hover {
+  background-color: #555;
+}
+
+/* Navigation styles with animation */
+nav {
+  background-color: #444;
+  padding: 0.5em;
+  transition: background-color 0.5s ease-in-out;
+}
+
+nav:hover {
+  background-color: #666;
+}
+
+/* Profile section with animation */
+.profile {
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+}
+
+.profile img {
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.profile img:hover {
+  transform: scale(1.2);
+}
+
+/* About Me section */
+.about-me {
+  margin-top: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  transition: background-color 0.5s ease-in-out;
+}
+
+footer:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  nav {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    display: block;
+    margin: 5px 0;
+  }
+}
