@@ -233,7 +233,7 @@ img {
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
-  transition: 0.3s;
+  transition: 0s;
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
@@ -327,7 +327,7 @@ img {
   overflow: hidden;
 }
 .work__img img {
-  transition: 1s;
+  transition: 0s;
 }
 .work__img img:hover {
   transform: scale(1.1);
