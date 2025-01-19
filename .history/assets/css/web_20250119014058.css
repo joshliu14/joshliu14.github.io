@@ -327,7 +327,7 @@ img {
   overflow: hidden;
 }
 .work__img img {
-  transition: 0s;
+  transition: 10s;
 }
 .work__img img:hover {
   transform: scale(1.1);
