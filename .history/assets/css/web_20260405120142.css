@@ -319,8 +319,6 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
-  display: grid;
-  grid-template-columns: repeat(1, 4fr);
   row-gap: 2rem;
 }
 .work__img {
