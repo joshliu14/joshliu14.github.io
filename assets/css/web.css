@@ -319,6 +319,7 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
+  grid-template-columns: repeat(4, 1fr); 
   row-gap: 2rem;
 }
 .work__img {
