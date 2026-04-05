@@ -112,7 +112,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -141,7 +141,7 @@ img {
   }
   &__link {
     position: relative;
-    color: #fff;
+    color: #ffffff;
 
     &:hover {
       position: relative;
@@ -219,7 +219,6 @@ img {
     right: 0;
     bottom: 0;
     width: 260px;
-    border-radius: 50%;
   }
   &__blob {
     fill: var(--first-color);
@@ -510,7 +509,7 @@ img {
     text-align: initial;
   }
   .work__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 2rem;
   }
 }
