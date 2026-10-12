@@ -3,517 +3,1140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="assets/css/web.css" />
+    <title>Joshua Liu | ML, Computer Vision &amp; Systems</title>
+    <meta
+      name="description"
+      content="Joshua Liu: M.S. in AI at Tufts, B.S. CS & Applied Math at Brandeis. I build computer-vision models, ML systems, and the software that ships them."
+    />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="canonical" href="https://joshliu14.github.io/" />
 
-    <!-- =====BOX ICONS===== -->
+    <!-- Social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://joshliu14.github.io/" />
+    <meta property="og:title" content="Joshua Liu | ML, Computer Vision & Systems" />
+    <meta
+      property="og:description"
+      content="I build models that see, and the systems that make them fast. M.S. AI @ Tufts · B.S. CS & Applied Math @ Brandeis."
+    />
+    <meta property="og:image" content="https://joshliu14.github.io/assets/img/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/icons/favicon.ico" sizes="any" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Joshua Liu</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Liu",
+        "url": "https://joshliu14.github.io/",
+        "email": "mailto:joshua.liu@tufts.edu",
+        "alumniOf": ["Brandeis University", "Tufts University"],
+        "sameAs": [
+          "https://github.com/joshliu14",
+          "https://www.linkedin.com/in/joshuagliu/",
+          "https://www.youtube.com/@joshualiu14"
+        ]
+      }
+    </script>
   </head>
+
   <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Joshua Liu</a>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 16 16">
+        <path
+          fill="currentColor"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+        />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+        />
+      </symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"
+        />
+      </symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M7 17 17 7M8 7h9v9"
+        />
+      </symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 12h14M13 6l6 6-6 6"
+        />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"
+        />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 9h10v10H9zM5 15V5h10"
+        />
+      </symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M8 9h8v6H8z"
+        />
+      </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ========== NAV ========== -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="nav__logo" aria-label="Joshua Liu, back to top">JL<sup>14</sup></a>
+
+        <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+          <ul class="nav__links">
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#experience">Experience</a></li>
+            <li><a class="nav__link" href="#research">Research</a></li>
+            <li><a class="nav__link" href="#projects">Projects</a></li>
+            <li><a class="nav__link" href="#skills">Skills</a></li>
+            <li><a class="nav__link" href="#education">Education</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav__actions">
+          <button
+            class="detect-toggle"
+            id="detect-toggle"
+            type="button"
+            aria-pressed="false"
+            title="Run object detection on this page (D)"
+          >
+            <svg aria-hidden="true"><use href="#i-scan" /></svg>
+            <span>Detect</span>
+          </button>
+          <a class="btn btn--primary btn--sm" href="resume.pdf" target="_blank" rel="noopener">
+            Resume
+            <svg class="arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+          </a>
+          <button
+            class="nav__toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Open menu"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ========== HERO ========== -->
+      <section class="hero" id="top">
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">
+              <span class="pulse" aria-hidden="true"></span>
+              Now: Graduate Researcher,
+              <a href="https://dsl.cs.tufts.edu/" target="_blank" rel="noopener">Tufts Datacenter Systems Lab</a>
+            </p>
+
+            <h1 class="hero__title" aria-label="Joshua Liu">
+              <span class="line" aria-hidden="true"><span class="word">Joshua</span></span>
+              <span class="line" aria-hidden="true"
+                ><span class="word serif">Liu</span><span class="word dot">.</span></span
+              >
+            </h1>
+
+            <p class="hero__lede">
+              I build models that <em>see</em>, and the systems that make them <em>fast</em>.
+            </p>
+
+            <p class="hero__meta">
+              <span>M.S. AI @ Tufts</span>
+              <span>B.S. CS &amp; Applied Math @ Brandeis</span>
+              <span>Varsity baseball</span>
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-file" /></svg>
+                View my resume
+              </a>
+              <a class="btn btn--ghost" href="#experience">
+                See the work
+                <svg class="arrow arrow--r" aria-hidden="true"><use href="#i-arrow-r" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Trading card -->
+          <div class="hero__card">
+            <div
+              class="tcard"
+              id="tcard"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+              aria-label="Joshua Liu trading card. Press to flip and see career stats."
+            >
+              <div class="tcard__inner">
+                <div class="tcard__face tcard__front">
+                  <div class="tcard__top">
+                    <span class="tcard__num">#14</span>
+                    <span>Series ’26</span>
+                  </div>
+                  <div class="tcard__photo">
+                    <picture>
+                      <source srcset="assets/img/profile.webp" type="image/webp" />
+                      <img
+                        src="assets/img/profile.png"
+                        alt="Portrait of Joshua Liu"
+                        width="500"
+                        height="500"
+                        data-det="person"
+                      />
+                    </picture>
+                    <div class="bbox bbox--live" style="--x: 27; --y: 9; --w: 47; --h: 60">
+                      <span class="bbox__label">joshua_liu 0.99</span>
+                    </div>
+                    <span class="tcard__scan" aria-hidden="true"></span>
+                  </div>
+                  <div class="tcard__name">
+                    <strong>Joshua Liu</strong>
+                    <span>ML · Vision · Systems</span>
+                  </div>
+                  <div class="tcard__foot">
+                    <span>Tufts · M.S. AI</span>
+                    <span>Brandeis ’26</span>
+                  </div>
+                  <span class="tcard__sheen" aria-hidden="true"></span>
+                </div>
+
+                <div class="tcard__face tcard__back">
+                  <div class="tcard__top">
+                    <span>Career stats</span>
+                    <span class="tcard__num">#14</span>
+                  </div>
+                  <table class="stats">
+                    <thead>
+                      <tr>
+                        <th scope="col">Yr</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Key stat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>’23</td>
+                        <td>Boston College</td>
+                        <td>Neuron viewer</td>
+                      </tr>
+                      <tr>
+                        <td>’24</td>
+                        <td>Commons XR</td>
+                        <td>&lt;1 min refresh</td>
+                      </tr>
+                      <tr>
+                        <td>’25</td>
+                        <td>Glaukos</td>
+                        <td class="hot">+51% F1</td>
+                      </tr>
+                      <tr>
+                        <td>’26</td>
+                        <td>Tufts DSL</td>
+                        <td class="hot">Now at bat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <dl class="tcard__bio">
+                    <div><dt>Bats</dt><dd>Python</dd></div>
+                    <div><dt>Throws</dt><dd>Exceptions (caught)</dd></div>
+                    <div><dt>GPA</dt><dd>3.92</dd></div>
+                    <div><dt>Honors</dt><dd>ΦBK · Magna</dd></div>
+                  </dl>
+                  <p class="tcard__scout">
+                    <span>Scouting report</span>
+                    “Plus contact on messy data. Elite plate discipline against race conditions. Projects as
+                    a five-tool engineer.”
+                  </p>
+                  <span class="tcard__sheen" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+            <p class="tcard__hint"><span aria-hidden="true">↻</span> Tap the card to flip it</p>
+          </div>
         </div>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+        <div class="ticker" aria-label="Highlights">
+          <div class="ticker__track">
+            <ul>
+              <li><strong>+51%</strong> F1 score</li>
+              <li><strong>+94%</strong> data throughput</li>
+              <li><strong>+29%</strong> FPS</li>
+              <li><strong>300+</strong> patient datasets</li>
+              <li><strong>&lt;1 min</strong> session → dashboard</li>
+              <li><strong>3.92</strong> GPA</li>
+              <li><strong>Phi Beta Kappa</strong></li>
+              <li><strong>Magna Cum Laude</strong></li>
+              <li><strong>Varsity</strong> baseball</li>
+            </ul>
+            <ul aria-hidden="true">
+              <li><strong>+51%</strong> F1 score</li>
+              <li><strong>+94%</strong> data throughput</li>
+              <li><strong>+29%</strong> FPS</li>
+              <li><strong>300+</strong> patient datasets</li>
+              <li><strong>&lt;1 min</strong> session → dashboard</li>
+              <li><strong>3.92</strong> GPA</li>
+              <li><strong>Phi Beta Kappa</strong></li>
+              <li><strong>Magna Cum Laude</strong></li>
+              <li><strong>Varsity</strong> baseball</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section class="section about" id="about">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(01) About</p>
+            <h2 class="section__title">Two fields. <span class="serif">One obsession.</span></h2>
+          </header>
+
+          <div class="about__grid">
+            <figure class="detect-photo" data-reveal>
+              <picture>
+                <source srcset="assets/img/about.webp" type="image/webp" />
+                <img
+                  src="assets/img/about.jpg"
+                  alt="Joshua Liu, wearing number 14, swinging at a pitch in a baseball game"
+                  width="1600"
+                  height="976"
+                  loading="lazy"
+                  data-det="baseball_game"
+                />
+              </picture>
+              <div class="bbox" style="--x: 39.1; --y: 31.5; --w: 15; --h: 38.1; --i: 0">
+                <span class="bbox__label">joshua_liu 0.99</span>
+              </div>
+              <div class="bbox bbox--below" style="--x: 30.1; --y: 43.7; --w: 11.4; --h: 7.6; --i: 1; --c: var(--orange)">
+                <span class="bbox__label">baseball bat 0.94</span>
+              </div>
+              <div class="bbox" style="--x: 28.4; --y: 42.7; --w: 1.6; --h: 2.6; --i: 2; --c: var(--pink)">
+                <span class="bbox__label">sports ball 0.81</span>
+              </div>
+              <div class="bbox bbox--below" style="--x: 49.5; --y: 47.2; --w: 20.5; --h: 30.8; --i: 3; --c: var(--cyan)">
+                <span class="bbox__label">person 0.97</span>
+              </div>
+              <div class="bbox" style="--x: 66.3; --y: 37.2; --w: 16.5; --h: 43.1; --i: 4; --c: var(--cyan)">
+                <span class="bbox__label">person 0.96</span>
+              </div>
+              <div class="bbox" style="--x: 1.7; --y: 30.1; --w: 4.5; --h: 13.5; --i: 5; --c: var(--violet)">
+                <span class="bbox__label">person 0.88</span>
+              </div>
+              <div class="bbox" style="--x: 12.4; --y: 32.9; --w: 5.3; --h: 10.2; --i: 6; --c: var(--violet)">
+                <span class="bbox__label">person 0.84</span>
+              </div>
+              <span class="detect-photo__scan" aria-hidden="true"></span>
+              <span class="detect-photo__hud" aria-hidden="true"><i></i> 7 objects detected</span>
+              <figcaption>fig. 01: the other place I optimize for contact.</figcaption>
+            </figure>
+
+            <div class="about__copy" data-reveal>
+              <p class="about__lead">
+                I'm a machine-learning engineer who cares about the <em>whole pipeline</em>: the data going in,
+                the model in the middle, and the milliseconds it takes to come out the other side.
+              </p>
+              <p>
+                Right now I'm pursuing an M.S. in Artificial Intelligence at <strong>Tufts</strong>, where I'm a
+                graduate researcher in the
+                <a class="inline-link" href="https://dsl.cs.tufts.edu/" target="_blank" rel="noopener">Datacenter Systems Lab</a>, digging into why CPU inference leaves so much
+                performance on the bench. Before that, I earned a B.S. in Computer Science &amp; Applied
+                Mathematics at <strong>Brandeis</strong> (magna cum laude, Phi Beta Kappa) while playing
+                varsity baseball.
+              </p>
+              <p>
+                Along the way I've trained vision models for medical imaging at <strong>Glaukos</strong>,
+                automated data pipelines at <strong>The Commons XR</strong>, and built tools for neuroscience
+                researchers at <strong>Boston College</strong>. Baseball taught me the rest: put in the reps,
+                study the film, make the small adjustment. Turns out that's also how you fix a race condition.
+              </p>
+
+              <ul class="facts">
+                <li class="fact">
+                  <span class="fact__num" data-count="3.92" data-decimals="2">3.92</span>
+                  <span class="fact__label">GPA at Brandeis</span>
+                </li>
+                <li class="fact">
+                  <span class="fact__num">ΦBK</span>
+                  <span class="fact__label">Phi Beta Kappa</span>
+                </li>
+                <li class="fact">
+                  <span class="fact__num">Magna</span>
+                  <span class="fact__label">Cum Laude</span>
+                </li>
+                <li class="fact">
+                  <span class="fact__num">#14</span>
+                  <span class="fact__label">Varsity baseball</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EXPERIENCE ========== -->
+      <section class="section experience" id="experience">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(02) Experience</p>
+            <h2 class="section__title">Where I've <span class="serif">shipped.</span></h2>
+            <p class="section__intro">
+              Three teams, three very different problems: medical computer vision, data infrastructure, and
+              tools for neuroscience research. Here's what I did and what changed because of it.
+            </p>
+          </header>
+
+          <div class="xp-list" id="xp-list">
+            <!-- Glaukos -->
+            <article class="xp" data-reveal>
+              <div class="xp__rail"><span class="xp__year">2025</span></div>
+              <div class="xp__card spot">
+                <header class="xp__head">
+                  <div>
+                    <p class="xp__meta">Jul – Dec 2025 · Burlington, MA</p>
+                    <h3 class="xp__company">Glaukos</h3>
+                    <p class="xp__role">Applied Research Co-op</p>
+                  </div>
+                  <span class="tag">Computer Vision · MedTech</span>
+                </header>
+
+                <p class="xp__headline">
+                  Taught vision models to see better, then built the tooling that feeds them.
+                </p>
+                <p class="xp__context">
+                  Glaukos is an ophthalmic medical-technology company. As an applied research co-op I worked the
+                  whole computer-vision loop: generating training data, training and tuning detectors, and making
+                  the software that runs them faster and more reliable.
+                </p>
+
+                <ul class="metrics">
+                  <li class="metric">
+                    <span class="metric__num" data-count="51" data-prefix="+" data-suffix="%">+51%</span>
+                    <span class="metric__label">F1 score</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num" data-count="94" data-prefix="+" data-suffix="%">+94%</span>
+                    <span class="metric__label">Data throughput</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num" data-count="29" data-prefix="+" data-suffix="%">+29%</span>
+                    <span class="metric__label">Frames per second</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num" data-count="300" data-suffix="+">300+</span>
+                    <span class="metric__label">Patient datasets</span>
+                  </li>
+                </ul>
+
+                <ol class="plays">
+                  <li>
+                    <h4>Ground truth on autopilot</h4>
+                    <p>
+                      Hand-drawn labels are the slowest part of most vision projects. I used Meta's
+                      <strong>Segment Anything Model 2 (SAM2)</strong> to generate ground-truth annotations
+                      automatically, then trained and optimized <strong>YOLO</strong> detection models on that
+                      data, improving F1 score by 51%.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>A data engine for 300+ patients</h4>
+                    <p>
+                      Built an <strong>Electron.js</strong> desktop app for image labeling with automated,
+                      event-based data sorting, replacing manual triage. Data-processing throughput rose 94%
+                      across 300+ patient datasets, more than 100 of them clinical.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>More frames, zero races</h4>
+                    <p>
+                      Tracked down race conditions in the vision software and restructured it with
+                      <strong>multithreading</strong> and proper concurrency controls, boosting FPS by 29%. I also
+                      automated the system's calibration routine in Python.
+                    </p>
+                  </li>
+                </ol>
+
+                <ul class="stack" aria-label="Tech used">
+                  <li>Python</li>
+                  <li>SAM2</li>
+                  <li>YOLO</li>
+                  <li>Electron.js</li>
+                  <li>Multithreading</li>
+                  <li>Computer vision</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- The Commons XR -->
+            <article class="xp" data-reveal>
+              <div class="xp__rail"><span class="xp__year">2024</span></div>
+              <div class="xp__card spot">
+                <header class="xp__head">
+                  <div>
+                    <p class="xp__meta">Jun – Sep 2024 · San Diego, CA</p>
+                    <h3 class="xp__company">The Commons XR</h3>
+                    <p class="xp__role">Data Engineer &amp; DevOps Intern</p>
+                  </div>
+                  <span class="tag">Data · DevOps</span>
+                </header>
+
+                <p class="xp__headline">Turned manual chores into pipelines that run themselves.</p>
+                <p class="xp__context">
+                  At The Commons XR, an extended-reality company, I worked where data meets infrastructure:
+                  making sure code shipped safely, and that session data became insight without anyone pressing
+                  a button.
+                </p>
+
+                <ul class="metrics">
+                  <li class="metric">
+                    <span class="metric__num">&lt;1 min</span>
+                    <span class="metric__label">Session → dashboard</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num" data-count="100" data-suffix="%">100%</span>
+                    <span class="metric__label">PRs auto-tested</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num">0</span>
+                    <span class="metric__label">Manual test runs per merge</span>
+                  </li>
+                </ul>
+
+                <ol class="plays plays--4">
+                  <li>
+                    <h4>CI on every pull request</h4>
+                    <p>
+                      Built <strong>GitHub Actions</strong> workflows that run the full test suite automatically
+                      on every PR, eliminating manual testing before each merge.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Session to dashboard in under a minute</h4>
+                    <p>
+                      Automated the post-session analytics pipeline with <strong>Azure Logic Apps</strong>. Data
+                      that used to wait on a manual refresh now lands in <strong>Power BI</strong> in under 60
+                      seconds.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>A schema built to grow</h4>
+                    <p>
+                      Designed and tested a new database schema that models relationships more cleanly and makes
+                      room for additional software-generated data.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Kept the team in sync</h4>
+                    <p>Led the team's daily standups, keeping priorities clear and blockers visible.</p>
+                  </li>
+                </ol>
+
+                <ul class="stack" aria-label="Tech used">
+                  <li>GitHub Actions</li>
+                  <li>Azure Logic Apps</li>
+                  <li>Power BI</li>
+                  <li>CI/CD</li>
+                  <li>Database design</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Boston College -->
+            <article class="xp" data-reveal>
+              <div class="xp__rail"><span class="xp__year">2023</span></div>
+              <div class="xp__card spot">
+                <header class="xp__head">
+                  <div>
+                    <p class="xp__meta">Jun – Aug 2023 · Chestnut Hill, MA</p>
+                    <h3 class="xp__company">Boston College</h3>
+                    <p class="xp__role">Full-Stack Engineer Intern · Computer Vision Dept.</p>
+                  </div>
+                  <span class="tag">Web · Connectomics</span>
+                </header>
+
+                <p class="xp__headline">Built the web tools researchers use to explore neurons.</p>
+                <p class="xp__context">
+                  I worked on
+                  <a class="inline-link" href="https://github.com/PytorchConnectomics/pytc-client" target="_blank" rel="noopener">pytc-client</a>,
+                  the app for PyTorch Connectomics workflows, used to segment and label neurons in
+                  high-resolution imaging data. It has a <strong>React.js</strong> front end and a
+                  <strong>FastAPI</strong> back end.
+                </p>
+
+                <ul class="metrics">
+                  <li class="metric">
+                    <span class="metric__num metric__num--word">Multi-view</span>
+                    <span class="metric__label">Concurrent Neuroglancer</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num metric__num--word">Full-stack</span>
+                    <span class="metric__label">React.js + FastAPI</span>
+                  </li>
+                  <li class="metric">
+                    <span class="metric__num metric__num--word">Open source</span>
+                    <span class="metric__label">PyTorch Connectomics</span>
+                  </li>
+                </ul>
+
+                <ol class="plays">
+                  <li>
+                    <h4>Side-by-side neuron views</h4>
+                    <p>
+                      Developed a multi-tab view that runs several <strong>Neuroglancer</strong> instances (the
+                      WebGL viewer for volumetric data) at once, so researchers can compare neuron data side by
+                      side without switching contexts.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Labels that fit the workflow</h4>
+                    <p>
+                      Built temporary and permanent file labeling for high-resolution neuron images, giving
+                      researchers flexible ways to organize large imaging datasets.
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Features end to end</h4>
+                    <p>
+                      Shipped features across both the React.js front end and the FastAPI back end of the
+                      segmentation and labeling app.
+                    </p>
+                  </li>
+                </ol>
+
+                <ul class="stack" aria-label="Tech used">
+                  <li>React.js</li>
+                  <li>FastAPI</li>
+                  <li>Neuroglancer</li>
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== RESEARCH ========== -->
+      <section class="section research" id="research">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(03) Research</p>
+            <h2 class="section__title">Asking <span class="serif">better questions.</span></h2>
+            <p class="section__intro">
+              From CPU performance to ML theory to the people who use the software, I like research that changes
+              how things actually get built.
+            </p>
+          </header>
+
+          <div class="rgrid">
+            <article class="rcard rcard--feature spot" data-reveal>
+              <div class="rcard__body">
+                <p class="rcard__meta">
+                  <span class="live"><i></i> Live</span>
+                  Sep 2026 – Present · Medford, MA
+                </p>
+                <h3 class="rcard__title">
+                  <a href="https://dsl.cs.tufts.edu/" target="_blank" rel="noopener"
+                    >Tufts Datacenter Systems Lab<svg aria-hidden="true"><use href="#i-arrow-ur" /></svg
+                  ></a>
+                </h3>
+                <p class="rcard__role">Graduate Researcher</p>
+                <p class="rcard__headline">Why is CPU inference leaving cores on the bench?</p>
+                <p>
+                  Most conversations about ML inference are about GPUs, but plenty of real-world inference runs
+                  on CPUs. I'm profiling CPU inference of machine-learning models with Linux
+                  <code>perf</code> to see where the time actually goes: which bottlenecks are memory-bound,
+                  which are compute-bound, and which cores sit underutilized.
+                </p>
+                <p>
+                  Next up: developing optimizations that maximize CPU utilization and cut inference latency.
+                </p>
+                <ul class="stack" aria-label="Tools">
+                  <li>perf</li>
+                  <li>Linux</li>
+                  <li>CPU profiling</li>
+                  <li>ML inference</li>
+                </ul>
+              </div>
+
+              <div class="cores" id="cores" aria-hidden="true">
+                <div class="cores__head">
+                  <span>core utilization</span>
+                  <span class="cores__state" id="cores-state">baseline</span>
+                </div>
+                <div class="cores__grid">
+                  <span class="core" style="--u: 0.92; --o: 0.95"></span>
+                  <span class="core" style="--u: 0.18; --o: 0.88"></span>
+                  <span class="core" style="--u: 0.74; --o: 0.93"></span>
+                  <span class="core" style="--u: 0.09; --o: 0.86"></span>
+                  <span class="core" style="--u: 0.55; --o: 0.9"></span>
+                  <span class="core" style="--u: 0.12; --o: 0.84"></span>
+                  <span class="core" style="--u: 0.97; --o: 0.97"></span>
+                  <span class="core" style="--u: 0.23; --o: 0.89"></span>
+                  <span class="core" style="--u: 0.41; --o: 0.91"></span>
+                  <span class="core" style="--u: 0.06; --o: 0.85"></span>
+                  <span class="core" style="--u: 0.66; --o: 0.92"></span>
+                  <span class="core" style="--u: 0.15; --o: 0.87"></span>
+                </div>
+                <div class="cores__foot">
+                  <span>cpu0 → cpu11</span>
+                  <span>illustrative</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="rcard spot" data-reveal>
+              <p class="rcard__meta">Jun 2024 – May 2025 · Brandeis</p>
+              <h3 class="rcard__title">Core Machine Learning Lab</h3>
+              <p class="rcard__role">
+                Undergraduate Researcher · with
+                <a class="inline-link" href="https://brandeis-machine-learning.github.io/" target="_blank" rel="noopener">Prof. Hongfu Liu</a>
+              </p>
+              <p class="rcard__headline">Feature selection, minus the retraining.</p>
+              <p>
+                Wrapper methods choose features by retraining a model on candidate subsets over and over:
+                accurate, but expensive. Influence functions estimate how a model would change
+                <em>without</em> retraining it, and Hessian-free variants skip the costly inverse-Hessian step.
+                I researched using them to make wrapper methods more computationally efficient.
+              </p>
+              <ul class="stack" aria-label="Topics">
+                <li>Influence functions</li>
+                <li>Feature selection</li>
+                <li>Optimization</li>
+              </ul>
+            </article>
+
+            <article class="rcard spot" data-reveal>
+              <p class="rcard__meta">Jun 2024 – May 2025 · Brandeis</p>
+              <h3 class="rcard__title">BraVA Lab</h3>
+              <p class="rcard__role">
+                Undergraduate Researcher · with
+                <a class="inline-link" href="https://dylancashman.github.io/" target="_blank" rel="noopener">Prof. Dylan Cashman</a>
+              </p>
+              <p class="rcard__headline">Research that starts with people.</p>
+              <p>
+                Conducted grounded-theory qualitative research, building understanding up from what people
+                actually say instead of starting from a hypothesis. Alongside it, I built an LLM-integrated
+                career-support tool for students with React.js and Google Gemini.
+              </p>
+              <ul class="stack" aria-label="Topics">
+                <li>React.js</li>
+                <li>Google Gemini</li>
+                <li>LLMs</li>
+                <li>Qualitative research</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section class="section projects" id="projects">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(04) Projects</p>
+            <h2 class="section__title">Things I've <span class="serif">built.</span></h2>
+            <p class="section__intro">
+              AI features, real-time vision, and full-stack apps, each one designed, built, and deployed to the
+              cloud.
+            </p>
+          </header>
+
+          <div class="pgrid">
+            <!-- MyGenius -->
+            <article class="proj" data-reveal>
+              <div class="proj__visual pv-chat" aria-hidden="true">
+                <div class="pv-chat__doc">
+                  <b>notes.pdf</b>
+                  <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="pv-chat__msg pv-chat__msg--me">Summarize my notes for the exam</div>
+                <div class="pv-chat__msg pv-chat__msg--ai"><i></i><i></i><i></i></div>
+              </div>
+              <div class="proj__body">
+                <p class="proj__meta"><span>01</span> Jan – Apr 2025 · AI / Web</p>
+                <h3 class="proj__title">MyGenius</h3>
+                <p class="proj__tagline">Shipping AI features to a live ed-tech app.</p>
+                <ul class="proj__list">
+                  <li>Implemented an AI chat feature and document upload with the OpenAI API.</li>
+                  <li>Fixed backend routing for exam-sharing links.</li>
+                  <li>Redesigned the dashboard UI.</li>
+                  <li>Deployed and managed the app on AWS Elastic Beanstalk.</li>
+                </ul>
+                <ul class="stack" aria-label="Tech used">
+                  <li>OpenAI API</li>
+                  <li>AWS Elastic Beanstalk</li>
+                  <li>Full-stack</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ProScout AI -->
+            <article class="proj" data-reveal>
+              <div class="proj__visual pv-cam" aria-hidden="true">
+                <span class="pv-cam__rec"><i></i> LIVE · CAM 02</span>
+                <span class="pv-cam__corner pv-cam__corner--tl"></span>
+                <span class="pv-cam__corner pv-cam__corner--tr"></span>
+                <span class="pv-cam__corner pv-cam__corner--bl"></span>
+                <span class="pv-cam__corner pv-cam__corner--br"></span>
+                <span class="pv-cam__box"><b>player 0.93</b></span>
+                <span class="pv-cam__fps">30 FPS · OpenCV</span>
+              </div>
+              <div class="proj__body">
+                <p class="proj__meta"><span>02</span> Sep – Dec 2024 · CV / Cloud</p>
+                <h3 class="proj__title">ProScout AI</h3>
+                <p class="proj__tagline">Real-time vision with a remote control.</p>
+                <ul class="proj__list">
+                  <li>Built real-time image analysis with OpenCV.</li>
+                  <li>Built a React dashboard for remote camera control and monitoring.</li>
+                  <li>Designed scalable cloud infrastructure on Google Cloud Platform.</li>
+                </ul>
+                <ul class="stack" aria-label="Tech used">
+                  <li>OpenCV</li>
+                  <li>React</li>
+                  <li>GCP</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- TravelMug -->
+            <article class="proj" data-reveal>
+              <div class="proj__visual pv-map" aria-hidden="true">
+                <span class="pv-map__pin" style="--px: 22%; --py: 38%; --d: 0s"></span>
+                <span class="pv-map__pin" style="--px: 58%; --py: 26%; --d: 0.4s"></span>
+                <span class="pv-map__pin pv-map__pin--hot" style="--px: 44%; --py: 60%; --d: 0.8s"></span>
+                <span class="pv-map__pin" style="--px: 78%; --py: 66%; --d: 1.2s"></span>
+                <span class="pv-map__card">☕ 0.3 mi · 4.8 ★ · match 96%</span>
+              </div>
+              <div class="proj__body">
+                <p class="proj__meta"><span>03</span> Dec 2023 – May 2024 · Full-stack</p>
+                <h3 class="proj__title">TravelMug</h3>
+                <p class="proj__tagline">Find your next favorite café.</p>
+                <ul class="proj__list">
+                  <li>Built a café recommender with React.js, Redux, and Firebase.</li>
+                  <li>Implemented user authentication and preference-based filtering.</li>
+                  <li>Containerized with Docker and set up CI/CD to Azure.</li>
+                </ul>
+                <ul class="stack" aria-label="Tech used">
+                  <li>React.js</li>
+                  <li>Redux</li>
+                  <li>Firebase</li>
+                  <li>Docker</li>
+                  <li>Azure</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="side" data-reveal>
+            <p class="side__label">Side quests</p>
+            <div class="side__grid">
+              <article class="side__item spot">
+                <h3>Comment Linter</h3>
+                <p>
+                  An AI-powered tool that flags outdated or misleading comments in a codebase. The only thing
+                  worse than no documentation is wrong documentation.
+                </p>
+                <span class="side__tag">AI · Developer tooling</span>
+              </article>
+              <article class="side__item spot">
+                <h3>Custom Linux Shell</h3>
+                <p>
+                  A Unix-like shell written in C with command execution, piping, redirection, process
+                  management, logging, and inter-process communication.
+                </p>
+                <span class="side__tag">C · Systems programming</span>
+              </article>
+              <a class="side__item side__item--link spot" href="https://github.com/joshliu14" target="_blank" rel="noopener">
+                <svg class="side__gh" aria-hidden="true"><use href="#i-github" /></svg>
+                <h3>More on GitHub</h3>
+                <p>Code, experiments, and works in progress.</p>
+                <span class="side__tag">github.com/joshliu14 <svg aria-hidden="true"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SKILLS ========== -->
+      <section class="section skills" id="skills">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(05) Skills</p>
+            <h2 class="section__title">The <span class="serif">toolkit.</span></h2>
+          </header>
+
+          <div class="sgrid">
+            <div class="sgroup spot" data-reveal>
+              <h3 class="sgroup__title">Languages</h3>
+              <p class="sgroup__label">Advanced</p>
+              <ul class="chips">
+                <li class="chip chip--hot">Python</li>
+                <li class="chip chip--hot">Java</li>
+                <li class="chip chip--hot">JavaScript</li>
+                <li class="chip chip--hot">TypeScript</li>
+                <li class="chip chip--hot">C++</li>
+                <li class="chip chip--hot">SQL</li>
+              </ul>
+              <p class="sgroup__label">Proficient</p>
+              <ul class="chips">
+                <li class="chip">Go</li>
+                <li class="chip">Swift</li>
+                <li class="chip">Lua</li>
+                <li class="chip">MATLAB</li>
+                <li class="chip">LaTeX</li>
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+              </ul>
+            </div>
+
+            <div class="sgroup spot" data-reveal>
+              <h3 class="sgroup__title">Frameworks</h3>
+              <p class="sgroup__label">ML &amp; vision</p>
+              <ul class="chips">
+                <li class="chip chip--hot">PyTorch</li>
+                <li class="chip chip--hot">TensorFlow</li>
+                <li class="chip chip--hot">OpenCV</li>
+              </ul>
+              <p class="sgroup__label">Web &amp; apps</p>
+              <ul class="chips">
+                <li class="chip">React.js</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">Electron.js</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Flask</li>
+                <li class="chip">MongoDB</li>
+              </ul>
+            </div>
+
+            <div class="sgroup spot" data-reveal>
+              <h3 class="sgroup__title">Tools &amp; platforms</h3>
+              <p class="sgroup__label">Cloud</p>
+              <ul class="chips">
+                <li class="chip chip--hot">AWS</li>
+                <li class="chip chip--hot">GCP</li>
+                <li class="chip chip--hot">Azure</li>
+                <li class="chip">Firebase</li>
+              </ul>
+              <p class="sgroup__label">Build &amp; ship</p>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">Docker</li>
+                <li class="chip">Linux</li>
+                <li class="chip">Vim</li>
+                <li class="chip">Anaconda</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bigmarquee" aria-hidden="true">
+          <div class="bigmarquee__track">
+            <span>Computer Vision</span><span class="serif">ML Systems</span><span>Data Engineering</span
+            ><span class="serif">Full-Stack</span><span>DevOps</span><span class="serif">Research</span
+            ><span>Computer Vision</span><span class="serif">ML Systems</span><span>Data Engineering</span
+            ><span class="serif">Full-Stack</span><span>DevOps</span><span class="serif">Research</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EDUCATION ========== -->
+      <section class="section education" id="education">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="section__index">(06) Education</p>
+            <h2 class="section__title">The <span class="serif">fundamentals.</span></h2>
+          </header>
+
+          <div class="egrid">
+            <article class="ecard spot" data-reveal>
+              <p class="ecard__meta">Expected May 2028 · Medford, MA</p>
+              <h3 class="ecard__school">Tufts University</h3>
+              <p class="ecard__degree">M.S. in Artificial Intelligence</p>
+              <ul class="badges">
+                <li>
+                  <a href="https://dsl.cs.tufts.edu/" target="_blank" rel="noopener">Graduate Researcher, Datacenter Systems Lab ↗</a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="ecard spot" data-reveal>
+              <p class="ecard__meta">May 2026 · Waltham, MA</p>
+              <h3 class="ecard__school">Brandeis University</h3>
+              <p class="ecard__degree">B.S. in Computer Science &amp; Applied Mathematics</p>
+              <ul class="badges">
+                <li class="badge--hot">GPA 3.92</li>
+                <li>Magna Cum Laude</li>
+                <li>Phi Beta Kappa</li>
+                <li>Varsity Baseball</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="eextra">
+            <div class="eblock" data-reveal>
+              <h3 class="eblock__title">Coursework</h3>
+              <ul class="chips">
+                <li class="chip">Data Structures &amp; Algorithms</li>
+                <li class="chip">Advanced Algorithms</li>
+                <li class="chip">Operating Systems</li>
+                <li class="chip">Computer System Design</li>
+                <li class="chip">Embedded Systems</li>
+                <li class="chip">Intro to Machine Learning</li>
+                <li class="chip">Database Management Systems</li>
+                <li class="chip">Fundamentals of Software Engineering</li>
+                <li class="chip">Web Application Development</li>
+                <li class="chip">Theory of Computation</li>
+                <li class="chip">Big Data &amp; Numerical Methods</li>
+              </ul>
+            </div>
+
+            <div class="eblock" data-reveal>
+              <h3 class="eblock__title">Teaching</h3>
+              <ul class="elist">
+                <li>
+                  <strong>Teaching Assistant</strong>
+                  <span>COSI 12B: Advanced Programming Techniques in Java</span>
+                </li>
+                <li>
+                  <strong>BUGS Tutor</strong>
+                  <span>Python, Java, data structures &amp; algorithms, operating systems</span>
+                </li>
+              </ul>
+              <h3 class="eblock__title eblock__title--gap">Athletics</h3>
+              <ul class="elist">
+                <li>
+                  <strong>Varsity Baseball</strong>
+                  <span>Brandeis University</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <p class="section__index" data-reveal>(07) Contact</p>
+          <h2 class="contact__title" data-reveal>Let's build <span class="serif">something.</span></h2>
+          <p class="contact__text" data-reveal>
+            I'm always up for a conversation about computer vision, ML systems, research, or baseball. Drop me
+            a line.
+          </p>
+
+          <div class="contact__email" data-reveal>
+            <a class="contact__mail" href="mailto:joshua.liu@tufts.edu">joshua.liu@tufts.edu</a>
+            <button class="copy-btn" type="button" data-copy="joshua.liu@tufts.edu">
+              <svg aria-hidden="true"><use href="#i-copy" /></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+
+          <ul class="contact__links" data-reveal>
+            <li>
+              <a href="https://github.com/joshliu14" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-github" /></svg>
+                <span>GitHub</span><small>joshliu14</small>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li> 
-            <li class="nav__item">
-              <a href="#experience" class="nav__link">Experience</a>
+            <li>
+              <a href="https://www.linkedin.com/in/joshuagliu/" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+                <span>LinkedIn</span><small>joshuagliu</small>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#projects" class="nav__link">Projects</a>
+            <li>
+              <a href="https://www.youtube.com/@joshualiu14" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-youtube" /></svg>
+                <span>YouTube</span><small>@joshualiu14</small>
+              </a>
             </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
-            </li>
-            <li class="nav__item">
-              <a href="#coursework" class="nav__link">Coursework</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+            <li>
+              <a href="resume.pdf" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-file" /></svg>
+                <span>Resume</span><small>PDF</small>
+              </a>
             </li>
           </ul>
         </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
-        </div>
-      </nav>
-    </header>
-
-    <main class="l-main">
-      <!--===== HOME =====-->
-      <section class="home bd-grid" id="home">
-        <div class="home__data">
-          <h1 class="home__title">
-            Hi,<br />I'm <span class="home__title-color">Josh</span><br />
-          </h1>
-
-          <a href="resume.pdf" class="button">Resume</a>
-        </div>
-
-        <div class="home__social">
-          <a
-            href="https://www.linkedin.com/in/joshua-liu-727847208/"
-            class="home__social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://github.com/joshliu14" class="home__social-icon"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://leetcode.com/joshliu_/" class="home__social-icon"
-            ><i class="bx bx-code-alt"></i
-          ></a>
-        </div>
-
-        <div class="home__img">
-          <svg
-            class="home__blob"
-            viewBox="0 0 479 467"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-              <image
-                class="home__blob-img"
-                x="30"
-                y="65"
-                href="assets/img/profile.png"
-              />
-            </g>
-          </svg>
-        </div>
-      </section>
-
-      <!--===== ABOUT =====-->
-      <section class="about section" id="about">
-        <h2 class="section-title">About</h2>
-
-        <div class="about__container bd-grid">
-          <div class="about__img">
-            <img src="assets/img/about.png" alt="" />
-          </div>
-
-          <div>
-            <h2 class="about__subtitle">I'm Josh Liu</h2>
-            <p class="about__text">
-              I am a senior at Brandeis University studying Computer Science and Applied Mathematics and an incoming Master's student in Computer Science at Northeastern University. I am also a varsity baseball player at Brandeis.
-              
-              My interests include software engineering and AI/ML, with a focus on building systems that apply theoretical conceptsto real-world problems. I am seeking opportunities to continue developing my technical skills and contribute to practical, impactful projects.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!--===== Experience =====-->
-      <section class="work section" id="experience">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="work__container bd-grid">
-              <div class="work__img">
-                <h3 class="work__title">Applied Research Co-op</h3>
-                <span class="work__subtitle">Glaukos</span>
-                <p class="work__description">
-                    <br />
-                    Leveraged Meta's SAM2 for automated ground-truth generation and trained optimized YOLO models, achieving a 51% improvement in F1 score.
-                    <br />
-                    <br />
-                    Developed an Electron.js application for image labeling and automated event-based data sorting, increasing data-processing throughput by 94% across 300+ patient datasets.
-                    <br />
-                    <br />
-                    Optimized vision system software with multithreading, concurrency controls, and Python-based calibration automation, eliminating race conditions and improving system reliability by 30%.
-                </p>
-              </div>
-
-              <div class="work__img">
-                <h3 class="work__title">Data Engineer and DevOps Intern</h3>
-                <span class="work__subtitle">The Commons XR</span>
-                <p class="work__description">
-                    <br />
-                    Directed daily standups and designed a testing environment with automated GitHub Actions CI workflows, improving testing and code merging efficiency by 20%.
-                    <br />
-                    <br />
-                    Developed an automated Power BI dashboard refresh solution using Azure Logic Apps, increasing session efficiency by 30%.
-                    <br />
-                    <br />
-                    Engineered and tested a new database schema to enhance relationship modeling and integrate additional software-generated data.
-                </p>
-              </div>
-
-              <div class="work__img">
-                <h3 class="work__title">Full Stack Engineer Intern</h3>
-                <span class="work__subtitle">Boston College (Computer Vision Dept.)</span>
-                <p class="work__description">
-                    <br />
-                    Contributed to a neuron segmentation and labeling web application using React.js and FastAPI.
-                    <br />
-                    <br />
-                    Developed a multi-tab visualization feature enabling concurrent Neuroglancer instances, improving user productivity by 50%.
-                    <br />
-                    <br />
-                    Designed and implemented temporary and permanent file labeling features for managing high-resolution neuron image datasets.
-                </p>
-              </div>
-
-              <div class="work__img">
-                <h3 class="work__title">Undergraduate Researcher</h3>
-                <span class="work__subtitle">Brandeis University (CoreML Lab & BraVA Lab)</span>
-                <p class="work__description">
-                    <br />
-                    Researched improving wrapper method computational efficiency using hessian-free influence functions (Core Machine Learning Lab).
-                    <br />
-                    <br />
-                    Conducted grounded theory qualitative research and built an LLM-integrated student career support tool using React.js and Google Gemini (BraVA Lab).
-                </p>
-              </div>
-        </div>
-      </section>
-
-      <!--===== Personal Projects =====-->
-      <section class="work section" id="projects">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="work__container bd-grid">
-                <div class="work__img">
-                <h3 class="work__title">MyGenius</h3>
-                <span class="work__subtitle">AI / Web Application</span>
-                <p class="work__description">
-                    <br />
-                    Implemented an AI chat feature and document upload functionality using the OpenAI API.
-                    <br />
-                    <br />
-                    Fixed backend routing issues and redesigned the dashboard UI.
-                    <br />
-                    <br />
-                    Deployed and managed the application on AWS Elastic Beanstalk.
-                </p>
-                </div>
-
-                <div class="work__img">
-                <h3 class="work__title">ProScoutAI</h3>
-                <span class="work__subtitle">Computer Vision / Cloud</span>
-                <p class="work__description">
-                    <br />
-                    Built a React dashboard enabling remote control and monitoring for clients.
-                    <br />
-                    <br />
-                    Developed real-time image analysis pipelines using OpenCV.
-                    <br />
-                    <br />
-                    Designed a scalable cloud infrastructure using Google Cloud Platform (GCP).
-                </p>
-                </div>
-
-                <div class="work__img">
-                <h3 class="work__title">Travel Mug</h3>
-                <span class="work__subtitle">Full Stack Web Application</span>
-                <p class="work__description">
-                    <br />
-                    Developed a scalable coffee recommendation platform using React.js, Redux, and Firebase.
-                    <br />
-                    <br />
-                    Implemented user authentication and preference-based filtering.
-                    <br />
-                    <br />
-                    Containerized the application with Docker and set up CI/CD using GitHub Actions and Azure.
-                </p>
-                </div>
-
-                <div class="work__img">
-                <h3 class="work__title">Comment Linter</h3>
-                <span class="work__subtitle">AI / Developer Tooling</span>
-                <p class="work__description">
-                    <br />
-                    Building an AI-powered tool to detect outdated or misleading comments in codebases (in progress).
-                    <br />
-                    <br />
-                    Focused on improving code readability, maintainability, and developer productivity.
-                </p>
-                </div>
-
-                <div class="work__img">
-                <h3 class="work__title">Custom Linux Shell</h3>
-                <span class="work__subtitle">Systems Programming</span>
-                <p class="work__description">
-                    <br />
-                    Implemented a Unix-like shell in C supporting command execution, piping, and process management.
-                    <br />
-                    <br />
-                    Built core features including input parsing, redirection, logging, and inter-process communication.
-                </p>
-                </div>
-        </div>
-      </section>
-      
-      <!--===== SKILLS =====-->
-      <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills__container bd-grid">
-          <div>
-            <h2 class="skills__subtitle">Relevant Skills</h2>
-            <p class="skills__text">
-              Programming languages, frameworks, and tools used in software engineering, data systems, and machine learning.
-            </p>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-java skills__icon"></i>
-                <span class="skills__name">JAVA</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-javascript skills__icon"></i>
-                <span class="skills__name">JAVASCRIPT / TYPESCRIPT</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-python skills__icon"></i>
-                <span class="skills__name">PYTHON</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-c-plus-plus skills__icon"></i>
-                <span class="skills__name">C++</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code-alt skills__icon"></i>
-                <span class="skills__name">MATLAB / LUA / GO / SWIFT</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code-block skills__icon"></i>
-                <span class="skills__name">HTML / CSS / LATEX</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-docker skills__icon"></i>
-                <span class="skills__name">DOCKER</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-cloud skills__icon"></i>
-                <span class="skills__name">AZURE / AWS / GCP</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-postgresql skills__icon"></i>
-                <span class="skills__name">SQL / NOSQL</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-react skills__icon"></i>
-                <span class="skills__name">REACT.JS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-nodejs skills__icon"></i>
-                <span class="skills__name">NODE.JS / EXPRESS.JS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxs-zap skills__icon"></i>
-                <span class="skills__name">FASTAPI / FLASK</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-redux skills__icon"></i>
-                <span class="skills__name">REDUX</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-mongodb skills__icon"></i>
-                <span class="skills__name">MONGODB</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-firebase skills__icon"></i>
-                <span class="skills__name">FIREBASE</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-brain skills__icon"></i>
-                <span class="skills__name">PYTORCH / TENSORFLOW / OPENCV</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-desktop skills__icon"></i>
-                <span class="skills__name">ELECTRON.JS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-git skills__icon"></i>
-                <span class="skills__name">GIT / GITHUB</span>
-              </div>
-            </div>
-          </div>
-      </section>
-      
-      <!--===== Relevant Coursework =====-->
-      <section class="skills section" id="coursework">
-        <h2 class="section-title">Coursework</h2>
-
-        <div class="skills__container bd-grid">
-          <div>
-            <h2 class="skills__subtitle">Relavant Courses</h2>
-           <p class="skills__text">
-                Relevant courses in computer science and applied mathematics.
-            </p> 
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">DATA STRUCTURES AND ALGORITHMS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">FUNDAMENTALS OF SOFTWARE ENGINEERING</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">ADVANCED PROGRAMMING TECHNIQUES IN JAVA</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">WEB APPLICATION DEVELOPMENT</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">OPERATING SYSTEMS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">THEORY OF COMPUTATION</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">ADVANCED ALGORITHMS</span>
-              </div>
-            </div>
-             <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">STRUCTURE AND INTERPRETATION OF COMPUTER PROGRAMS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">EMBEDDED SYSTEMS</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">MACHINE LEARNING</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code skills__icon"></i>
-                <span class="skills__name">PRINCIPLES OF COMPUTER SYSTEM DESIGN</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-math skills__icon"></i>
-                <span class="skills__name">NUMERICAL METHODS AND BIG DATA</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-math skills__icon"></i>
-                <span class="skills__name">DISCRETE STRUCTURES</span>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <!--===== INFO =====-->
-      <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact__input">joshuagyliu@gmail.com</p>
-        <p class="contact__input">949-551-8585</p>
-        <p class="contact__input">Brandeis University | Northeastern University</p>
-        <p class="contact__input">254 Concord Ave, Cambridge, MA 02138</p>
       </section>
     </main>
 
-    <!--===== FOOTER =====-->
     <footer class="footer">
-      <p class="footer__title">Joshua Liu</p>
-      <div class="footer__social">
-        <a href="https://www.facebook.com/josh.liu.9847" class="footer__icon"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/joshliu_" class="footer__icon"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a href="https://twitter.com/jahliu" class="footer__icon"
-          ><i class="bx bxl-twitter"></i
-        ></a>
+      <div class="container footer__inner">
+        <p>© <span id="year">2026</span> Joshua Liu</p>
+        <p class="footer__hint">Hand-coded from scratch. Press <kbd>D</kbd> to run detection on this page.</p>
+        <a href="#top" class="footer__top">Back to top ↑</a>
       </div>
-      <p class="footer__copy">&#169; Josh Liu 2026</p>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <div class="detect-layer" id="detect-layer" aria-hidden="true"></div>
+    <div class="detect-hud" id="detect-hud" aria-live="polite"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>
